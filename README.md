@@ -1,3 +1,6 @@
 # php_dsa
 
-<a href="./search">Search</a>
+| **ALGORITHM**                 |
+|-------------------------------|
+| <a href="./search">Search</a> |
+
