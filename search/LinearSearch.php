@@ -9,7 +9,7 @@ class LinearSearch implements SearchInterface
     public function search(array $arr, int $target): int
     {
         for ($i = 0; $i < count($arr); $i++) {
-            if ($arr[0] === $target) {
+            if ($arr[$i] === $target) {
                 return $i;
             }
         }
