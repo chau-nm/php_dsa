@@ -9,7 +9,7 @@ class SelectionSort implements SortInterface
 {
     use SwapTrait;
 
-    public function sort(array &$array)
+    public function sort(array &$array): array
     {
         for ($i = 0; $i < count($array); $i++) {
             $min = $this->findMin($array, $i, count($array) - 1);
@@ -17,6 +17,7 @@ class SelectionSort implements SortInterface
                 $this->swap($array, $i, $min);
             }
         }
+        return $array;
     }
 
     /**

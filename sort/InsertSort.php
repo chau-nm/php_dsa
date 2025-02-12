@@ -6,7 +6,7 @@ require "./SortInterface.php";
 
 class InsertSort implements SortInterface
 {
-    public function sort(array &$array)
+    public function sort(array &$array): array
     {
         for ($i = 1; $i < count($array); $i++) {
             $key = $array[$i];
@@ -16,6 +16,7 @@ class InsertSort implements SortInterface
             }
             $array[$j + 1] = $key;
         }
+        return $array;
     }
 }
 

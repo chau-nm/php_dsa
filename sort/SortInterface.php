@@ -8,7 +8,7 @@ interface SortInterface
      * Sort array
      *
      * @param int[] $array
-     * @return mixed
+     * @return array
      */
-    public function sort(array &$array);
+    public function sort(array &$array): array;
 }

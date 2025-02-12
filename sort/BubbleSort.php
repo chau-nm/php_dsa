@@ -9,7 +9,7 @@ class BubbleSort implements SortInterface
 {
     use SwapTrait;
 
-    public function sort(array &$array)
+    public function sort(array &$array): array
     {
         for ($i = 0; $i < count($array); $i++) {
             for ($j = 0; $j < count($array) - $i - 1; $j++) {
@@ -18,6 +18,7 @@ class BubbleSort implements SortInterface
                 }
             }
         }
+        return $array;
     }
 }
 
