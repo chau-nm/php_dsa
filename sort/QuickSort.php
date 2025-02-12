@@ -6,7 +6,6 @@ require "./SortInterface.php";
 
 class QuickSort implements SortInterface
 {
-
     public function sort(array &$array): array
     {
         return $this->quickSort($array);
@@ -18,7 +17,7 @@ class QuickSort implements SortInterface
             return $array;
         }
 
-        $pivotIndex = (int) (count($array) / 2);
+        $pivotIndex = floor((count($array) / 2));
         $pivot = $array[$pivotIndex];
 
         $left = [];
@@ -38,3 +37,7 @@ class QuickSort implements SortInterface
         return array_merge($this->quicksort($left), $equal, $this->quicksort($right));
     }
 }
+
+$arr = [3,12,5,2,3,1,2];
+$quickSort = new QuickSort();
+print_r($quickSort->sort($arr));
